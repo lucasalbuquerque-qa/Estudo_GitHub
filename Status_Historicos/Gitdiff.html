@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Diff</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">🔀</span>
+    <h1>git diff <span class="tag">Status e Histórico</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git diff</strong> mostra exatamente o que foi alterado nos arquivos, linha por linha, antes de fazer o commit.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git diff</strong> para revisar as mudanças feitas nos arquivos antes de adicioná-los ou commitá-los.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Ver todas as alterações não adicionadas</h2>
+      <p>Mostra o que mudou nos arquivos que ainda não foram para o stage:</p>
+      <pre><code>git diff</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Ver alterações já adicionadas</h2>
+      <p>Mostra o que mudou nos arquivos que já estão no stage (após git add):</p>
+      <pre><code>git diff --staged</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Comparar dois commits</h2>
+      <p>Compara as diferenças entre dois commits usando o hash deles:</p>
+      <pre><code>git diff abc1234 def5678</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Comparar com a branch main</h2>
+      <p>Veja o que mudou na sua branch em relação à main:</p>
+      <pre><code>git diff main</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git diff
+git diff --staged
+git diff main</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Linhas em <strong>verde (+)</strong> são adições e linhas em <strong>vermelho (-)</strong> são remoções no diff.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git diff</footer>
+
+</body>
+</html>

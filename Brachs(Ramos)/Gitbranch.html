@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Branch</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">🌿</span>
+    <h1>git branch <span class="tag">Branch (Ramos)</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git branch</strong> gerencia as branches do repositório. Branches são ramificações independentes do projeto, usadas para desenvolver funcionalidades sem afetar o código principal.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git branch</strong> para listar, criar ou deletar branches no seu repositório.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Listar todas as branches</h2>
+      <p>Mostra todas as branches locais (a atual fica marcada com <strong>*</strong>):</p>
+      <pre><code>git branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Criar uma nova branch</h2>
+      <p>Cria uma nova branch mas não muda para ela:</p>
+      <pre><code>git branch nome-da-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Deletar uma branch</h2>
+      <p>Remove uma branch que já foi mergeada:</p>
+      <pre><code>git branch -d nome-da-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Renomear a branch atual</h2>
+      <p>Muda o nome da branch em que você está:</p>
+      <pre><code>git branch -M novo-nome</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git branch
+git branch minha-feature
+git branch
+git branch -d minha-feature</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Para criar uma branch e já mudar para ela ao mesmo tempo, use <code>git checkout -b nome-da-branch</code>.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git branch</footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Log</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">📜</span>
+    <h1>git log <span class="tag">Status e Histórico</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git log</strong> exibe o histórico de commits do repositório, mostrando quem fez cada alteração, quando e com qual mensagem.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git log</strong> para ver o histórico de mudanças do projeto, encontrar um commit específico ou entender o que foi feito ao longo do tempo.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Ver o histórico completo</h2>
+      <p>Mostra todos os commits com detalhes:</p>
+      <pre><code>git log</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Histórico resumido</h2>
+      <p>Mostra cada commit em uma linha:</p>
+      <pre><code>git log --oneline</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Histórico com gráfico de branches</h2>
+      <p>Visualiza as branches e merges de forma gráfica:</p>
+      <pre><code>git log --oneline --graph --decorate</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Ver os últimos N commits</h2>
+      <p>Para ver apenas os últimos 5 commits por exemplo:</p>
+      <pre><code>git log -5 --oneline</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git log --oneline
+git log --oneline --graph --decorate
+git log -5 --oneline</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Pressione <code>q</code> para sair do log quando ele abrir no modo de navegação do terminal.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git log</footer>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Push</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">🚀</span>
+    <h1>git push <span class="tag">Salvar Alterações</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git push</strong> envia os commits locais para o repositório remoto no GitHub, tornando as alterações visíveis para outros colaboradores.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git push</strong> depois de fazer os commits locais e quiser enviá-los para o GitHub.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Enviar para a branch atual</h2>
+      <p>Envia os commits da branch atual para o repositório remoto:</p>
+      <pre><code>git push</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Enviar para uma branch específica</h2>
+      <p>Indica o repositório remoto e a branch de destino:</p>
+      <pre><code>git push origin main</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Primeiro push de uma branch nova</h2>
+      <p>Quando a branch ainda não existe no GitHub, use o <strong>-u</strong> para vincular:</p>
+      <pre><code>git push -u origin nome-da-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Verificar após o push</h2>
+      <p>Confirme que não há mais commits pendentes:</p>
+      <pre><code>git status</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git add .
+git commit -m "Adiciona nova funcionalidade"
+git push origin main
+git status</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Se o push for negado por falta de permissão, verifique se a URL do remote contém o usuário correto com <code>git remote -v</code>.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git push</footer>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Config</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">⚙️</span>
+    <h1>git config <span class="tag">Iniciar Projeto</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git config</strong> define as configurações do Git, como nome de usuário e e-mail. Essas informações aparecem em todos os commits que você fizer.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git config</strong> na primeira vez que instalar o Git, ou quando quiser usar uma conta diferente em um projeto específico.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Configurar nome globalmente</h2>
+      <p>Define o nome para todos os projetos do computador:</p>
+      <pre><code>git config --global user.name "Seu Nome"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Configurar e-mail globalmente</h2>
+      <p>Define o e-mail para todos os projetos do computador:</p>
+      <pre><code>git config --global user.email "seuemail@exemplo.com"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Configurar só para um projeto</h2>
+      <p>Para usar uma conta diferente apenas no projeto atual, remova o <strong>--global</strong>:</p>
+      <pre><code>git config user.name "Outro Nome"
+git config user.email "outroemail@exemplo.com"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Verificar as configurações</h2>
+      <p>Para ver todas as configurações ativas:</p>
+      <pre><code>git config --list</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git config --global user.name "Lucas"
+git config --global user.email "lucas@exemplo.com"
+git config --list</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Use <code>--global</code> para configurar uma vez e valer para tudo. Sem ele, a config vale só para o repositório atual.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git config</footer>
+
+</body>
+</html>

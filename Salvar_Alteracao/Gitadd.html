@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Add</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">➕</span>
+    <h1>git add <span class="tag">Salvar Alterações</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git add</strong> prepara os arquivos para o commit, adicionando-os à área de stage. Só os arquivos no stage serão incluídos no próximo commit.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git add</strong> depois de modificar ou criar arquivos, para marcá-los como prontos para serem salvos no histórico.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Adicionar um arquivo específico</h2>
+      <p>Adiciona apenas um arquivo ao stage:</p>
+      <pre><code>git add nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Adicionar todos os arquivos</h2>
+      <p>Adiciona todos os arquivos modificados e novos de uma vez:</p>
+      <pre><code>git add .</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Verificar o que foi adicionado</h2>
+      <p>Confirme quais arquivos estão no stage:</p>
+      <pre><code>git status</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git status
+git add .
+git status</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Prefira <code>git add .</code> para adicionar tudo, mas use <code>git add arquivo</code> quando quiser separar alterações em commits diferentes.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git add</footer>
+
+</body>
+</html>

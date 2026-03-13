@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Reset</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">⏮️</span>
+    <h1>git reset <span class="tag">Desfazer / Corrigir</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git reset</strong> move o ponteiro da branch para um commit anterior, podendo desfazer commits locais. Diferente do revert, ele reescreve o histórico.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git reset</strong> para desfazer commits que ainda não foram enviados ao GitHub. Evite usá-lo após o push para não criar conflitos.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Reset suave — mantém as alterações</h2>
+      <p>Desfaz o commit mas mantém os arquivos modificados no stage:</p>
+      <pre><code>git reset --soft HEAD~1</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Reset misto — mantém os arquivos</h2>
+      <p>Desfaz o commit e tira os arquivos do stage, mas mantém as alterações nos arquivos:</p>
+      <pre><code>git reset HEAD~1</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Reset total — apaga tudo</h2>
+      <p>Desfaz o commit e apaga todas as alterações dos arquivos. Use com cuidado:</p>
+      <pre><code>git reset --hard HEAD~1</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Voltar para um commit específico</h2>
+      <p>Use o hash do commit para voltar a um ponto específico:</p>
+      <pre><code>git reset --hard abc1234</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git log --oneline
+git reset --soft HEAD~1
+git status</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> <code>HEAD~1</code> significa "1 commit atrás do atual". <code>HEAD~3</code> volta 3 commits. Use <code>--soft</code> quando quiser refazer o commit com mensagem diferente.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git reset</footer>
+
+</body>
+</html>

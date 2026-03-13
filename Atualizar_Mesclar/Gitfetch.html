@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Fetch</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">📡</span>
+    <h1>git fetch <span class="tag">Atualizar / Mesclar</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git fetch</strong> baixa as alterações do repositório remoto mas <strong>não as aplica</strong> automaticamente. Permite verificar o que mudou antes de integrar ao projeto local.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git fetch</strong> quando quiser ver o que mudou no GitHub antes de decidir se vai aplicar as alterações no seu projeto.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Buscar as atualizações remotas</h2>
+      <p>Baixa as informações mas não altera seus arquivos:</p>
+      <pre><code>git fetch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Ver o que chegou do remoto</h2>
+      <p>Compara sua branch local com a remota após o fetch:</p>
+      <pre><code>git log HEAD..origin/main --oneline</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Aplicar as alterações depois</h2>
+      <p>Se quiser aplicar o que foi baixado, use o merge:</p>
+      <pre><code>git merge origin/main</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Diferença entre fetch e pull</h2>
+      <p><strong>git fetch</strong> só baixa. <strong>git pull</strong> baixa e já aplica. O pull é equivalente a:</p>
+      <pre><code>git fetch
+git merge origin/main</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git fetch
+git log HEAD..origin/main --oneline
+git merge origin/main</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Use <code>git fetch</code> em projetos com muitos colaboradores para inspecionar as mudanças antes de aplicá-las e evitar surpresas.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git fetch</footer>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Init</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">🗂️</span>
+    <h1>git init <span class="tag">Iniciar Projeto</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git init</strong> cria um novo repositório Git vazio na pasta atual. É o primeiro passo para começar a versionar um projeto do zero.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git init</strong> quando você tem um projeto local que ainda não está sendo versionado pelo Git e quer começar a controlar as alterações.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Abrir a pasta do projeto no terminal</h2>
+      <p>No terminal do VS Code, navegue até a pasta do seu projeto:</p>
+      <pre><code>cd meu-projeto</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Inicializar o repositório</h2>
+      <p>Execute o comando para criar o repositório Git:</p>
+      <pre><code>git init</code></pre>
+      <p>Isso cria uma pasta oculta <strong>.git</strong> dentro do projeto, que é onde o Git guarda todo o histórico.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Verificar se funcionou</h2>
+      <p>Confirme que o repositório foi criado:</p>
+      <pre><code>git status</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Definir a branch principal</h2>
+      <p>Por padrão o Git cria a branch <strong>master</strong>. Para usar <strong>main</strong> (padrão atual):</p>
+      <pre><code>git branch -M main</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>cd meu-projeto
+git init
+git branch -M main
+git status</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Após o git init, o próximo passo é configurar seu usuário com <code>git config</code> e depois adicionar os arquivos com <code>git add</code>.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git init</footer>
+
+</body>
+</html>

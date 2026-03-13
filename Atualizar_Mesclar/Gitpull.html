@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Pull</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">⬇️</span>
+    <h1>git pull <span class="tag">Atualizar / Mesclar</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git pull</strong> baixa as alterações mais recentes do repositório remoto e as aplica automaticamente no projeto local. É uma combinação de <code>git fetch</code> + <code>git merge</code>.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git pull</strong> antes de começar a trabalhar, para garantir que seu projeto local está atualizado com o que está no GitHub.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Verificar a branch atual</h2>
+      <p>Confirme em qual branch você está:</p>
+      <pre><code>git branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Atualizar o projeto</h2>
+      <p>Baixa e aplica as alterações remotas:</p>
+      <pre><code>git pull</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Atualizar de uma branch específica</h2>
+      <p>Indica o repositório remoto e a branch de origem:</p>
+      <pre><code>git pull origin main</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Verificar após atualizar</h2>
+      <p>Confirme que o projeto está em dia:</p>
+      <pre><code>git status</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git branch
+git pull origin main
+git status</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Sempre faça <code>git pull</code> antes de começar a editar arquivos em projetos colaborativos para evitar conflitos desnecessários.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git pull</footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Revert</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">↩️</span>
+    <h1>git revert <span class="tag">Desfazer / Corrigir</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git revert</strong> desfaz um commit criando um novo commit que reverte as alterações. É a forma segura de desfazer mudanças sem apagar o histórico.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git revert</strong> quando quiser desfazer um commit que já foi enviado para o GitHub, sem reescrever o histórico do projeto.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Encontrar o hash do commit</h2>
+      <p>Primeiro veja o histórico para pegar o código do commit:</p>
+      <pre><code>git log --oneline</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Reverter o commit</h2>
+      <p>Use o hash do commit que quer desfazer:</p>
+      <pre><code>git revert abc1234</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Reverter sem abrir o editor</h2>
+      <p>Para criar o commit de reversão direto, sem abrir o editor de mensagem:</p>
+      <pre><code>git revert abc1234 --no-edit</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Enviar a reversão para o GitHub</h2>
+      <p>Após reverter, envie as alterações:</p>
+      <pre><code>git push</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git log --oneline
+git revert abc1234 --no-edit
+git push</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Prefira <code>git revert</code> ao <code>git reset</code> quando o commit já foi enviado ao GitHub, pois ele não reescreve o histórico.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git revert</footer>
+
+</body>
+</html>

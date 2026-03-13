@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Merge</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">🔗</span>
+    <h1>git merge <span class="tag">Branch (Ramos)</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git merge</strong> une o conteúdo de uma branch com outra, combinando as alterações feitas em paralelo em um único histórico.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git merge</strong> quando terminar o desenvolvimento em uma branch e quiser trazer essas alterações para a branch principal.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Ir para a branch que receberá as alterações</h2>
+      <p>Normalmente o merge é feito na branch main:</p>
+      <pre><code>git checkout main</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Mesclar a branch desejada</h2>
+      <p>Traz as alterações da outra branch para a atual:</p>
+      <pre><code>git merge nome-da-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Resolver conflitos se houver</h2>
+      <p>Se o Git avisar conflito, abra os arquivos, resolva manualmente e execute:</p>
+      <pre><code>git add .
+git commit -m "Resolve conflito no merge"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Ver o resultado</h2>
+      <p>Confirme que o merge foi concluído:</p>
+      <pre><code>git log --oneline --graph</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git checkout main
+git merge minha-feature
+git log --oneline --graph</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Após o merge, você pode deletar a branch com <code>git branch -d nome-da-branch</code> para manter o repositório organizado.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git merge</footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Status</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">🔍</span>
+    <h1>git status <span class="tag">Status e Histórico</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git status</strong> mostra o estado atual do repositório: quais arquivos foram modificados, quais estão prontos para commit e quais ainda não estão sendo rastreados.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git status</strong> sempre que quiser saber o que mudou no projeto antes de fazer um commit.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Ver o status atual</h2>
+      <p>No terminal do VS Code execute:</p>
+      <pre><code>git status</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Entendendo o resultado</h2>
+      <p>O Git mostra os arquivos em três categorias:</p>
+      <pre><code># Arquivos prontos para commit (em verde)
+Changes to be committed
+
+# Arquivos modificados mas não adicionados (em vermelho)
+Changes not staged for commit
+
+# Arquivos novos sem rastreamento
+Untracked files</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Versão resumida</h2>
+      <p>Para ver um resumo mais compacto:</p>
+      <pre><code>git status -s</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git status
+git status -s</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Sempre rode <code>git status</code> antes de fazer um <code>git add</code> ou <code>git commit</code> para não enviar arquivos errados.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git status</footer>
+
+</body>
+</html>

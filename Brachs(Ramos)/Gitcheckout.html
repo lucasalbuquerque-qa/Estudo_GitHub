@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Checkout</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">🔄</span>
+    <h1>git checkout <span class="tag">Branch (Ramos)</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git checkout</strong> permite mudar de branch ou restaurar arquivos para um estado anterior. É usado para navegar entre diferentes versões do projeto.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git checkout</strong> para trocar de branch, criar e já entrar em uma nova branch, ou restaurar um arquivo específico.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Mudar para outra branch</h2>
+      <p>Troca para uma branch que já existe:</p>
+      <pre><code>git checkout nome-da-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Criar e entrar numa nova branch</h2>
+      <p>Cria a branch e já muda para ela com o <strong>-b</strong>:</p>
+      <pre><code>git checkout -b nova-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Voltar para a branch main</h2>
+      <p>Retorna para a branch principal do projeto:</p>
+      <pre><code>git checkout main</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Restaurar um arquivo modificado</h2>
+      <p>Desfaz as alterações de um arquivo específico:</p>
+      <pre><code>git checkout -- nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git checkout -b minha-feature
+git branch
+git checkout main</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Em versões mais recentes do Git, <code>git switch nome-da-branch</code> é o comando moderno para trocar de branch.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git checkout</footer>
+
+</body>
+</html>

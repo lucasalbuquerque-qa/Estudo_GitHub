@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Stash</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <span class="icon">📦</span>
+    <h1>git stash <span class="tag">Desfazer / Corrigir</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git stash</strong> guarda temporariamente as alterações que ainda não foram commitadas, deixando o projeto limpo para você trocar de branch ou fazer outra tarefa.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git stash</strong> quando precisar trocar de branch mas ainda não quer fazer um commit com as alterações atuais.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Guardar as alterações</h2>
+      <p>Salva as alterações atuais no stash e limpa o projeto:</p>
+      <pre><code>git stash</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Guardar com uma descrição</h2>
+      <p>Adiciona uma mensagem para identificar o que foi guardado:</p>
+      <pre><code>git stash save "descrição do que estava fazendo"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Ver o que está guardado</h2>
+      <p>Lista todos os stashes salvos:</p>
+      <pre><code>git stash list</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Recuperar as alterações</h2>
+      <p>Traz de volta as alterações guardadas:</p>
+      <pre><code>git stash pop</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git stash save "ajuste no formulário"
+git checkout main
+git checkout minha-branch
+git stash pop</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> <code>git stash pop</code> aplica e remove do stash. Se quiser manter no stash após aplicar, use <code>git stash apply</code>.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git stash</footer>
+
+</body>
+</html>
