@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fork no GitHub</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🍴</span>
+    <h1>fork <span class="tag">Colaboração</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O <strong>fork</strong> é uma cópia de um repositório de outra pessoa para a sua conta no GitHub. Com ele você pode modificar o projeto livremente sem afetar o original, e depois propor suas alterações através de um Pull Request.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use o <strong>fork</strong> quando quiser contribuir com um projeto open source ou usar o código de outra pessoa como base para o seu próprio projeto.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Fazer o fork no GitHub</h2>
+      <p>Acesse o repositório no GitHub e clique no botão <strong>Fork</strong> no canto superior direito. O GitHub vai criar uma cópia do repositório na sua conta.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Clonar o fork para sua máquina</h2>
+      <p>Depois do fork, clone o repositório da <strong>sua conta</strong> (não o original):</p>
+      <pre><code>git clone https://github.com/SEU-USUARIO/nome-do-repo.git
+cd nome-do-repo</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Conectar ao repositório original</h2>
+      <p>Adicione o repositório original como remote para receber atualizações futuras:</p>
+      <pre><code>git remote add upstream https://github.com/DONO-ORIGINAL/nome-do-repo.git
+git remote -v</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Manter o fork atualizado</h2>
+      <p>Para trazer as novidades do repositório original para o seu fork:</p>
+      <pre><code>git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># 1. Fork feito no GitHub pelo botão Fork
+
+# 2. Clona o fork
+git clone https://github.com/SEU-USUARIO/projeto.git
+cd projeto
+
+# 3. Conecta ao original
+git remote add upstream https://github.com/ORIGINAL/projeto.git
+
+# 4. Cria branch para sua alteração
+git checkout -b minha-contribuicao
+
+# 5. Faz as mudanças e commita
+git add .
+git commit -m "Minha contribuição"
+git push origin minha-contribuicao</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Após o push, o GitHub vai sugerir automaticamente abrir um <code>Pull Request</code> para o repositório original. É assim que sua contribuição chega ao dono do projeto!
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — fork</footer>
+
+</body>
+</html>

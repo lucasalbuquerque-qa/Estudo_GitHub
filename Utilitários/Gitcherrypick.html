@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Cherry-pick</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🍒</span>
+    <h1>git cherry-pick <span class="tag">Utilitários</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git cherry-pick</strong> aplica um commit específico de uma branch em outra, sem precisar fazer o merge completo. É como "colher" apenas um commit que você quer trazer.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git cherry-pick</strong> quando quiser trazer uma correção ou funcionalidade de outra branch sem mesclar tudo que está nela.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Encontrar o hash do commit</h2>
+      <p>Primeiro veja o histórico da branch de origem para pegar o hash:</p>
+      <pre><code>git log --oneline nome-da-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Ir para a branch de destino</h2>
+      <p>Mude para a branch onde quer aplicar o commit:</p>
+      <pre><code>git checkout main</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Aplicar o commit</h2>
+      <p>Use o hash do commit que quer trazer:</p>
+      <pre><code>git cherry-pick abc1234</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Aplicar vários commits de uma vez</h2>
+      <p>Para trazer múltiplos commits, liste os hashes separados por espaço:</p>
+      <pre><code>git cherry-pick abc1234 def5678 ghi9012</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="06">Resolver conflitos se houver</h2>
+      <p>Se aparecer conflito, resolva os arquivos e continue:</p>
+      <pre><code>git add .
+git cherry-pick --continue
+
+# Ou para cancelar:
+git cherry-pick --abort</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># Ver commits da outra branch
+git log --oneline feature/pagamento
+
+# Mudar para main
+git checkout main
+
+# Aplicar o commit específico
+git cherry-pick abc1234
+
+# Verificar resultado
+git log --oneline</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> O cherry-pick é muito usado para trazer hotfixes de uma branch de desenvolvimento para a branch de produção sem fazer merge de funcionalidades incompletas.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git cherry-pick</footer>
+
+</body>
+</html>

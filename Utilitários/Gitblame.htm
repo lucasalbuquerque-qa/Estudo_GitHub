@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Blame</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🔎</span>
+    <h1>git blame <span class="tag">Utilitários</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git blame</strong> mostra, linha por linha, quem foi o último a modificar cada parte de um arquivo, quando foi feito e em qual commit. Útil para entender a origem de um código.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git blame</strong> quando quiser saber quem escreveu uma linha específica de código, quando foi alterada, ou para investigar a origem de um bug.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Ver o blame de um arquivo</h2>
+      <p>Mostra cada linha com o autor, data e hash do commit:</p>
+      <pre><code>git blame nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Ver apenas um intervalo de linhas</h2>
+      <p>Para focar em linhas específicas, use <strong>-L</strong> com o intervalo:</p>
+      <pre><code>git blame -L 10,25 nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Ver com data simplificada</h2>
+      <p>Exibe a data em formato mais curto e fácil de ler:</p>
+      <pre><code>git blame --date=short nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Ignorar mudanças de espaço em branco</h2>
+      <p>Para ignorar commits que só ajustaram indentação ou espaços:</p>
+      <pre><code>git blame -w nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git blame index.html
+git blame -L 5,20 index.html
+git blame --date=short index.html</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> No VS Code, a extensão <code>GitLens</code> mostra o blame diretamente no editor, ao lado de cada linha, sem precisar do terminal.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git blame</footer>
+
+</body>
+</html>

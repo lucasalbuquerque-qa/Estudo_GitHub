@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Shortlog</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">📊</span>
+    <h1>git shortlog <span class="tag">Utilitários</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git shortlog</strong> exibe um resumo do histórico de commits agrupado por autor. Mostra quantos commits cada pessoa fez e quais foram as mensagens.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git shortlog</strong> para ver quem mais contribuiu no projeto, gerar um resumo de atividade da equipe ou montar um changelog de versão.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Ver resumo por autor</h2>
+      <p>Lista todos os autores com seus commits:</p>
+      <pre><code>git shortlog</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Ordenar por quantidade de commits</h2>
+      <p>Mostra quem mais commitou, do mais ativo para o menos:</p>
+      <pre><code>git shortlog -sn</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Ver todos os branches</h2>
+      <p>Inclui commits de todas as branches no resumo:</p>
+      <pre><code>git shortlog -sn --all</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Ver num intervalo de datas</h2>
+      <p>Filtra os commits de um período específico:</p>
+      <pre><code>git shortlog --after="2024-01-01" --before="2024-12-31"</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git shortlog
+git shortlog -sn
+git shortlog -sn --all</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> O <code>git shortlog -sn</code> é muito usado para gerar a seção de <em>Contributors</em> em projetos open source no README.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git shortlog</footer>
+
+</body>
+</html>

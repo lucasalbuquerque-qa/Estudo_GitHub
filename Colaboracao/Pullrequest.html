@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pull Request</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🔀</span>
+    <h1>pull request <span class="tag">Colaboração</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O <strong>Pull Request (PR)</strong> é uma solicitação para que o dono de um repositório revise e aceite as suas alterações. É a forma oficial de contribuir com projetos no GitHub.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use o <strong>Pull Request</strong> quando terminar uma funcionalidade em uma branch e quiser integrar ao projeto principal, seja no seu próprio repositório ou em um repositório de outra pessoa via fork.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Preparar a branch com suas alterações</h2>
+      <p>Certifique-se de que suas alterações estão commitadas e enviadas para o GitHub:</p>
+      <pre><code>git checkout -b minha-feature
+git add .
+git commit -m "Adiciona nova funcionalidade"
+git push origin minha-feature</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Abrir o Pull Request no GitHub</h2>
+      <p>Após o push, acesse o repositório no GitHub. Vai aparecer um botão amarelo <strong>"Compare & pull request"</strong>. Clique nele, escreva um título e descrição explicando o que foi feito e clique em <strong>Create pull request</strong>.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Aguardar a revisão</h2>
+      <p>O dono do repositório vai revisar o código. Ele pode:</p>
+      <pre><code># Aprovar e fazer o merge — suas alterações entram no projeto
+# Pedir mudanças — você edita, commita e o PR atualiza automaticamente
+# Fechar sem aceitar — o PR é recusado</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Atualizar o PR se pedido mudanças</h2>
+      <p>Se o revisor pedir ajustes, faça na mesma branch e envie de novo:</p>
+      <pre><code>git add .
+git commit -m "Ajusta conforme revisão"
+git push origin minha-feature</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># 1. Cria e envia a branch
+git checkout -b corrige-bug-login
+git add .
+git commit -m "Corrige bug no formulário de login"
+git push origin corrige-bug-login
+
+# 2. Abre o PR no GitHub pelo botão "Compare & pull request"
+
+# 3. Se pedirem ajuste:
+git add .
+git commit -m "Corrige indentação conforme revisão"
+git push origin corrige-bug-login</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Escreva uma boa descrição no PR explicando <em>o que</em> foi feito e <em>por quê</em>. Isso facilita a revisão e aumenta a chance do PR ser aceito mais rápido.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — pull request</footer>
+
+</body>
+</html>
