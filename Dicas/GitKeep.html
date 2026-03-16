@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.gitkeep</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">📂</span>
+    <h1>.gitkeep <span class="tag">Dicas</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O <strong>.gitkeep</strong> é uma convenção usada para versionar pastas vazias no Git. Por padrão, o Git não rastreia diretórios vazios — ele só rastreia arquivos. O .gitkeep resolve isso.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">O problema</h2>
+      <p>O Git ignora pastas vazias. Se você criar uma pasta <strong>uploads/</strong> vazia no projeto e fizer commit, ela não vai para o GitHub:</p>
+      <pre><code># Criou a pasta
+mkdir uploads/
+
+# Tentou adicionar — Git ignora pastas vazias
+git add uploads/
+git status
+# Resultado: nothing to commit</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">A solução — criar o .gitkeep</h2>
+      <p>Coloque um arquivo vazio chamado <strong>.gitkeep</strong> dentro da pasta para que o Git a reconheça:</p>
+      <pre><code># Cria o arquivo vazio dentro da pasta
+touch uploads/.gitkeep
+
+# Agora o Git detecta a pasta
+git add uploads/.gitkeep
+git status
+# Resultado: new file: uploads/.gitkeep</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Commitar a pasta</h2>
+      <p>Agora é só commitar normalmente:</p>
+      <pre><code>git add uploads/.gitkeep
+git commit -m "Adiciona pasta uploads ao projeto"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Ignorar o conteúdo mas manter a pasta</h2>
+      <p>Muito comum em pastas de upload ou cache: manter a pasta no Git mas ignorar tudo dentro dela. Configure o <code>.gitignore</code> assim:</p>
+      <pre><code># No arquivo .gitignore:
+uploads/*
+!uploads/.gitkeep</code></pre>
+      <p>Isso ignora tudo em <strong>uploads/</strong> exceto o próprio <strong>.gitkeep</strong>.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Casos de uso comuns</h2>
+      <p>Pastas que costumam precisar de .gitkeep:</p>
+      <pre><code>uploads/     # arquivos enviados por usuários
+logs/        # arquivos de log gerados
+cache/       # arquivos de cache
+tmp/         # arquivos temporários
+storage/     # armazenamento local</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># Cria as pastas necessárias
+mkdir -p uploads logs tmp
+
+# Adiciona .gitkeep em cada uma
+touch uploads/.gitkeep logs/.gitkeep tmp/.gitkeep
+
+# Configura o .gitignore para ignorar o conteúdo
+echo "uploads/*" >> .gitignore
+echo "!uploads/.gitkeep" >> .gitignore
+
+# Commita
+git add .
+git commit -m "Adiciona estrutura de pastas do projeto"</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> O nome <code>.gitkeep</code> é apenas uma convenção — o arquivo pode ter qualquer nome. Mas <code>.gitkeep</code> é o mais reconhecido pela comunidade e deixa clara a intenção.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — .gitkeep</footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boas Mensagens de Commit</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">✍️</span>
+    <h1>Boas mensagens de commit <span class="tag">Dicas</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>Uma <strong>boa mensagem de commit</strong> explica o que foi feito e por quê, de forma clara e objetiva. Isso torna o histórico do projeto fácil de entender semanas ou meses depois.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">A regra de ouro</h2>
+      <p>Escreva a mensagem como se fosse completar a frase: <strong>"Se aplicado, este commit vai..."</strong></p>
+      <pre><code># Bom
+git commit -m "Adiciona validação no formulário de login"
+git commit -m "Corrige erro 404 na rota de perfil"
+git commit -m "Remove dependência não utilizada"
+
+# Ruim
+git commit -m "fix"
+git commit -m "alterações"
+git commit -m "atualizando coisas"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Use o modo imperativo</h2>
+      <p>Escreva no imperativo: <strong>Adiciona</strong>, <strong>Corrige</strong>, <strong>Remove</strong>, <strong>Atualiza</strong> — não "Adicionado", "Corrigindo" ou "Adicionei".</p>
+      <pre><code># Imperativo (correto)
+"Adiciona página de contato"
+"Corrige bug no carrinho"
+"Atualiza README com instruções"
+
+# Outros modos (evite)
+"Adicionando página de contato"
+"Bug do carrinho corrigido"
+"Adicionei o README"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Seja específico e curto</h2>
+      <p>Limite o título a <strong>72 caracteres</strong>. Se precisar de mais detalhes, adicione uma descrição após uma linha em branco:</p>
+      <pre><code>git commit -m "Corrige validação de e-mail no cadastro
+
+O campo aceitava e-mails sem o domínio (.com, .br etc).
+Adicionada regex de validação antes de enviar o formulário."</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Agrupe mudanças relacionadas</h2>
+      <p>Cada commit deve fazer <strong>uma coisa só</strong>. Não misture correção de bug com nova funcionalidade no mesmo commit:</p>
+      <pre><code># Commits separados e claros
+git commit -m "Corrige alinhamento do header no mobile"
+git commit -m "Adiciona botão de compartilhar no post"
+
+# Commit que mistura tudo (evite)
+git commit -m "Várias correções e melhorias"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Referenciar issues do GitHub</h2>
+      <p>Se o commit resolve um issue, mencione o número para vincular automaticamente:</p>
+      <pre><code>git commit -m "Corrige bug no login — fecha #42"
+git commit -m "Implementa pesquisa — resolve #87"</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># Ruim
+git commit -m "coisas"
+
+# Bom
+git commit -m "Adiciona máscara de CPF no formulário de cadastro"
+
+# Ótimo (com descrição)
+git commit -m "Adiciona máscara de CPF no formulário de cadastro
+
+Usuários relatavam confusão ao preencher o campo.
+A máscara formata automaticamente no padrão 000.000.000-00."</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Pense no seu eu do futuro lendo o histórico às 23h tentando entender o que aconteceu. Uma boa mensagem de commit é um presente para você mesmo.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — Boas mensagens de commit</footer>
+
+</body>
+</html>

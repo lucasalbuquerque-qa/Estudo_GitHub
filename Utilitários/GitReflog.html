@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Reflog</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🕰️</span>
+    <h1>git reflog <span class="tag">Utilitários</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git reflog</strong> mostra o histórico completo de tudo que aconteceu no repositório local — incluindo commits deletados, resets e trocas de branch. É o "plano B" para recuperar trabalho perdido.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git reflog</strong> quando fizer um <code>git reset --hard</code> ou deletar commits por engano e precisar recuperá-los. O reflog guarda o histórico por 90 dias por padrão.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Ver o reflog completo</h2>
+      <p>Lista todas as ações recentes com hash e descrição:</p>
+      <pre><code>git reflog</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Entendendo o resultado</h2>
+      <p>Cada linha mostra o hash, posição (<strong>HEAD@{N}</strong>) e o que aconteceu:</p>
+      <pre><code>abc1234 HEAD@{0}: commit: Adiciona login
+def5678 HEAD@{1}: reset: moving to HEAD~1
+ghi9012 HEAD@{2}: commit: Corrige bug no menu</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Recuperar um commit perdido</h2>
+      <p>Encontrou o hash do commit perdido no reflog? Restaure com:</p>
+      <pre><code>git checkout abc1234
+
+# Ou crie uma nova branch a partir dele:
+git checkout -b recuperado abc1234</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Desfazer um reset acidental</h2>
+      <p>Se fez um <code>git reset --hard</code> por engano, use o reflog para voltar:</p>
+      <pre><code># Veja o reflog para achar o ponto anterior
+git reflog
+
+# Volte para aquele estado
+git reset --hard HEAD@{2}</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo — recuperar commit perdido</h2>
+      <pre><code># Situação: fiz git reset --hard por engano
+
+# 1. Abro o reflog para achar o commit
+git reflog
+
+# 2. Encontro o hash do commit perdido: abc1234
+
+# 3. Crio uma branch para recuperar
+git checkout -b recuperado abc1234
+
+# 4. Verifico que o conteúdo voltou
+git log --oneline</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> O <code>git reflog</code> só funciona localmente — ele não existe no GitHub. É por isso que é tão importante não deletar sua pasta local antes de ter certeza que o remoto está atualizado.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git reflog</footer>
+
+</body>
+</html>

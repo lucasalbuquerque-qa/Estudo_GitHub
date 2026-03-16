@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliases do Git</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">⚡</span>
+    <h1>Aliases do Git <span class="tag">Dicas</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p><strong>Aliases</strong> são atalhos personalizados para comandos Git longos ou que você usa com frequência. Em vez de digitar <code>git status</code>, você pode criar <code>git s</code> e economizar tempo no dia a dia.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Como criar um alias</h2>
+      <p>Use o <code>git config</code> com a opção <strong>--global</strong> para criar aliases que funcionam em todos os projetos:</p>
+      <pre><code>git config --global alias.NOME "comando"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Aliases mais úteis do dia a dia</h2>
+      <p>Crie atalhos para os comandos que você mais usa:</p>
+      <pre><code># Status resumido
+git config --global alias.s "status -s"
+
+# Log bonito em uma linha
+git config --global alias.l "log --oneline --graph --decorate"
+
+# Adicionar tudo
+git config --global alias.aa "add ."
+
+# Commit com mensagem
+git config --global alias.c "commit -m"
+
+# Push
+git config --global alias.p "push"
+
+# Trocar de branch
+git config --global alias.sw "switch"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Usar os aliases criados</h2>
+      <p>Depois de criar, é só usar normalmente:</p>
+      <pre><code># Em vez de: git status -s
+git s
+
+# Em vez de: git log --oneline --graph --decorate
+git l
+
+# Em vez de: git commit -m "mensagem"
+git c "Adiciona nova funcionalidade"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Ver todos os aliases criados</h2>
+      <p>Lista todos os aliases configurados:</p>
+      <pre><code>git config --global --list | grep alias</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Remover um alias</h2>
+      <p>Para deletar um alias que não quer mais:</p>
+      <pre><code>git config --global --unset alias.NOME</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo — setup de aliases</h2>
+      <pre><code>git config --global alias.s "status -s"
+git config --global alias.l "log --oneline --graph --decorate"
+git config --global alias.aa "add ."
+git config --global alias.c "commit -m"
+git config --global alias.p "push"
+git config --global alias.sw "switch"
+
+# Usando no dia a dia:
+git s
+git aa
+git c "Corrige bug no header"
+git p</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Os aliases ficam salvos no arquivo <code>~/.gitconfig</code> do seu computador. Você pode abrir e editar esse arquivo diretamente pelo VS Code para gerenciar todos de uma vez.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — Aliases do Git</footer>
+
+</body>
+</html>

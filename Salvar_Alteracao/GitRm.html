@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Rm</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🗑️</span>
+    <h1>git rm <span class="tag">Salvar Alterações</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git rm</strong> remove arquivos do projeto e do rastreamento do Git ao mesmo tempo, registrando a remoção no stage para o próximo commit.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git rm</strong> quando quiser deletar um arquivo do projeto e parar de rastreá-lo. Se você deletar pelo explorador de arquivos, o Git detecta a remoção mas você ainda precisa fazer o add e commit.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Remover um arquivo do projeto e do Git</h2>
+      <p>Deleta o arquivo localmente e registra a remoção no stage:</p>
+      <pre><code>git rm nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Remover uma pasta inteira</h2>
+      <p>Use o <strong>-r</strong> para remover pastas recursivamente:</p>
+      <pre><code>git rm -r nome-da-pasta/</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Parar de rastrear sem deletar o arquivo</h2>
+      <p>Remove do rastreamento do Git mas mantém o arquivo no seu computador. Muito útil para arquivos que foram commitados por engano:</p>
+      <pre><code>git rm --cached nome-do-arquivo.html
+
+# Para uma pasta inteira:
+git rm --cached -r nome-da-pasta/</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Commitar a remoção</h2>
+      <p>Após o rm, a remoção já está no stage. Confirme e commite:</p>
+      <pre><code>git status
+git commit -m "Remove arquivo desnecessário"</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># Remover arquivo commitado por engano (mantém local)
+git rm --cached senha.txt
+echo "senha.txt" >> .gitignore
+git add .gitignore
+git commit -m "Remove senha.txt do rastreamento"</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> O uso mais comum do <code>git rm --cached</code> é para remover do GitHub arquivos que foram commitados antes de existir o <code>.gitignore</code>, como a pasta <code>node_modules/</code>.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git rm</footer>
+
+</body>
+</html>

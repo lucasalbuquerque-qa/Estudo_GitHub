@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conventional Commits</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">📐</span>
+    <h1>Conventional Commits <span class="tag">Dicas</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O <strong>Conventional Commits</strong> é um padrão profissional de mensagens de commit que usa prefixos como <code>feat:</code>, <code>fix:</code> e <code>docs:</code> para deixar o histórico organizado, legível e até automatizável.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Estrutura da mensagem</h2>
+      <p>O formato segue esse padrão:</p>
+      <pre><code>tipo(escopo): descrição curta
+
+# Exemplos:
+feat(login): adiciona autenticação com Google
+fix(carrinho): corrige cálculo de frete
+docs(readme): atualiza instruções de instalação</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Tipos principais</h2>
+      <p>Cada prefixo tem um significado específico:</p>
+      <pre><code>feat:     nova funcionalidade
+fix:      correção de bug
+docs:     mudança em documentação
+style:    formatação, sem mudança de lógica
+refactor: refatoração sem nova feature ou fix
+test:     adição ou correção de testes
+chore:    tarefas de manutenção, configs
+perf:     melhoria de performance
+ci:       mudanças em CI/CD
+build:    mudanças no sistema de build</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Com escopo (opcional)</h2>
+      <p>O escopo identifica qual parte do projeto foi afetada:</p>
+      <pre><code>feat(auth): adiciona login com GitHub
+fix(api): corrige timeout nas requisições
+docs(contributing): adiciona guia de contribuição
+style(header): ajusta espaçamento do menu</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Breaking changes</h2>
+      <p>Para mudanças que quebram compatibilidade, adicione <strong>!</strong> ou a nota no rodapé:</p>
+      <pre><code>feat!: remove suporte ao Node 14
+
+# Ou com rodapé:
+feat(api): altera formato de resposta
+
+BREAKING CHANGE: o campo "user" foi renomeado para "usuario"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Por que usar esse padrão</h2>
+      <p>Com Conventional Commits você pode gerar changelogs automáticos, usar ferramentas como <strong>semantic-release</strong> para versionar automaticamente e ter um histórico que qualquer dev entende:</p>
+      <pre><code>git log --oneline
+
+# Resultado organizado:
+feat(auth): adiciona login social
+fix(cart): corrige bug no total
+docs: atualiza README
+chore: atualiza dependências</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git commit -m "feat(cadastro): adiciona validação de CPF"
+git commit -m "fix(login): corrige redirecionamento após logout"
+git commit -m "docs: adiciona exemplos de uso na documentação"
+git commit -m "chore: atualiza versão do Node no package.json"
+git commit -m "refactor(api): simplifica lógica de autenticação"</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Instale a extensão <code>Conventional Commits</code> no VS Code — ela abre um assistente que te guia na hora de escrever o commit no padrão correto.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — Conventional Commits</footer>
+
+</body>
+</html>

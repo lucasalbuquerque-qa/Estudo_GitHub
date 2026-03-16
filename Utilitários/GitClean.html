@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Clean</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🧹</span>
+    <h1>git clean <span class="tag">Utilitários</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git clean</strong> apaga arquivos não rastreados pelo Git da pasta do projeto — aqueles que nunca foram adicionados com <code>git add</code>. Útil para limpar arquivos temporários e resíduos de build.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git clean</strong> quando quiser remover arquivos soltos que o Git não rastreia, como logs temporários, arquivos gerados por ferramentas ou resíduos de compilação.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Visualizar o que será removido</h2>
+      <p>Antes de apagar, veja quais arquivos seriam removidos com o modo dry-run (<strong>-n</strong>):</p>
+      <pre><code>git clean -n</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Remover arquivos não rastreados</h2>
+      <p>O <strong>-f</strong> (force) é obrigatório para executar a limpeza:</p>
+      <pre><code>git clean -f</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Remover também pastas não rastreadas</h2>
+      <p>Por padrão o clean não remove pastas. Use <strong>-fd</strong> para incluir diretórios:</p>
+      <pre><code>git clean -fd</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Remover arquivos ignorados também</h2>
+      <p>Para limpar até os arquivos listados no <code>.gitignore</code>, use <strong>-fx</strong>:</p>
+      <pre><code>git clean -fx</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="06">Modo interativo</h2>
+      <p>Para escolher um por um o que remover:</p>
+      <pre><code>git clean -i</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># Primeiro veja o que será removido
+git clean -n
+
+# Depois execute a limpeza
+git clean -fd
+
+# Confirme que está limpo
+git status</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>⚠️ Atenção:</strong> O <code>git clean</code> é irreversível — os arquivos removidos não vão para a lixeira. Sempre rode <code>git clean -n</code> antes para conferir o que será apagado.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git clean</footer>
+
+</body>
+</html>

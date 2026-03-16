@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Mv</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">📁</span>
+    <h1>git mv <span class="tag">Salvar Alterações</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git mv</strong> renomeia ou move arquivos e pastas já rastreados pelo Git, registrando a mudança automaticamente no stage, pronto para o próximo commit.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git mv</strong> em vez de renomear arquivos manualmente pelo sistema operacional. Quando você renomeia fora do Git, ele interpreta como um arquivo deletado e outro criado — o git mv preserva o histórico corretamente.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Renomear um arquivo</h2>
+      <p>Muda o nome do arquivo e já adiciona a mudança ao stage:</p>
+      <pre><code>git mv nome-antigo.html nome-novo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Mover um arquivo para outra pasta</h2>
+      <p>Move o arquivo para um diretório diferente:</p>
+      <pre><code>git mv arquivo.html pasta/arquivo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Mover e renomear ao mesmo tempo</h2>
+      <p>Você pode mover e já renomear em um único comando:</p>
+      <pre><code>git mv nome-antigo.html nova-pasta/nome-novo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Verificar e commitar</h2>
+      <p>Após o mv, a mudança já está no stage. Confirme e commite:</p>
+      <pre><code>git status
+git commit -m "Renomeia arquivo X para Y"</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git mv index.html home.html
+git status
+git commit -m "Renomeia index.html para home.html"</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Se você já renomeou o arquivo fora do Git, pode corrigir com <code>git add -A</code> que detecta renomeações automaticamente antes do commit.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git mv</footer>
+
+</body>
+</html>
