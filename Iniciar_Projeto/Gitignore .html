@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Ignore</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🚫</span>
+    <h1>git ignore <span class="tag">Configuração</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O arquivo <strong>.gitignore</strong> diz ao Git quais arquivos e pastas ele deve ignorar e nunca rastrear. Muito usado para não enviar ao GitHub arquivos como senhas, configurações locais, dependências e arquivos gerados automaticamente.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use o <strong>.gitignore</strong> para evitar que arquivos desnecessários ou sensíveis sejam enviados ao GitHub, como a pasta <strong>node_modules</strong>, arquivos <strong>.env</strong> com senhas, ou arquivos temporários do sistema.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Criar o arquivo .gitignore</h2>
+      <p>Na raiz do projeto, crie o arquivo pelo terminal:</p>
+      <pre><code>touch .gitignore</code></pre>
+      <p>Ou simplesmente crie um novo arquivo no VS Code com o nome <strong>.gitignore</strong> (com o ponto na frente).</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Adicionar arquivos e pastas para ignorar</h2>
+      <p>Abra o <strong>.gitignore</strong> e escreva o nome do que quer ignorar, um por linha:</p>
+      <pre><code># Dependências
+node_modules/
+
+# Variáveis de ambiente e senhas
+.env
+.env.local
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Pasta de build
+dist/
+build/
+
+# Logs
+*.log
+
+# Arquivos do editor
+.vscode/
+.idea/</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Entendendo os padrões</h2>
+      <p>Você pode usar padrões para ignorar grupos de arquivos:</p>
+      <pre><code># Ignora todos os arquivos .log
+*.log
+
+# Ignora uma pasta específica e tudo dentro dela
+node_modules/
+
+# Ignora um arquivo específico na raiz
+/config.local.js
+
+# Ignora arquivos em qualquer subpasta com esse nome
+**/temp/
+
+# Não ignora este arquivo mesmo que o padrão acima pegue
+!importante.log</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Verificar o que está sendo ignorado</h2>
+      <p>Para confirmar se um arquivo está sendo ignorado pelo Git:</p>
+      <pre><code>git check-ignore -v nome-do-arquivo</code></pre>
+      <p>Para listar todos os arquivos ignorados no projeto:</p>
+      <pre><code>git status --ignored</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="06">Parar de rastrear um arquivo já commitado</h2>
+      <p>Se você já commitou um arquivo por engano e agora quer ignorá-lo, primeiro adicione-o ao <strong>.gitignore</strong> e depois remova do rastreamento:</p>
+      <pre><code># Remove do rastreamento mas mantém o arquivo localmente
+git rm --cached nome-do-arquivo
+
+# Para uma pasta inteira
+git rm --cached -r nome-da-pasta/
+
+# Depois commite a remoção
+git add .
+git commit -m "Remove arquivo do rastreamento"</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo — projeto Node.js</h2>
+      <pre><code># Cria o .gitignore
+touch .gitignore
+
+# Conteúdo do .gitignore:
+node_modules/
+.env
+dist/
+*.log
+.DS_Store
+
+# Verifica se está funcionando
+git status
+git check-ignore -v node_modules</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> O site <strong>gitignore.io</strong> gera automaticamente um <code>.gitignore</code> completo para sua linguagem ou framework. Basta digitar "Node", "Python", "React" e ele monta o arquivo para você.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — .gitignore</footer>
+
+</body>
+</html>
