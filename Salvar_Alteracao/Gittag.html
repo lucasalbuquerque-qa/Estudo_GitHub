@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Tag</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🏷️</span>
+    <h1>git tag <span class="tag">Salvar Alterações</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git tag</strong> marca um ponto específico no histórico do projeto como uma versão importante, como <strong>v1.0</strong> ou <strong>v2.3.1</strong>. Tags são usadas para marcar releases e versões estáveis.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git tag</strong> quando quiser marcar uma versão do projeto para lançamento, como ao publicar uma nova versão de um sistema ou biblioteca.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Listar todas as tags</h2>
+      <p>Mostra todas as tags criadas no repositório:</p>
+      <pre><code>git tag</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Criar uma tag simples</h2>
+      <p>Cria uma tag leve no commit atual:</p>
+      <pre><code>git tag v1.0</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Criar uma tag anotada</h2>
+      <p>Tag anotada inclui mensagem, autor e data — recomendada para releases:</p>
+      <pre><code>git tag -a v1.0 -m "Versão 1.0 — lançamento inicial"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Enviar tags para o GitHub</h2>
+      <p>Tags não são enviadas automaticamente com o push. Envie separado:</p>
+      <pre><code># Enviar uma tag específica
+git push origin v1.0
+
+# Enviar todas as tags de uma vez
+git push origin --tags</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="06">Deletar uma tag</h2>
+      <p>Remove a tag localmente e no repositório remoto:</p>
+      <pre><code># Deletar local
+git tag -d v1.0
+
+# Deletar no GitHub
+git push origin --delete v1.0</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git tag
+git tag -a v1.0 -m "Versão 1.0 — lançamento inicial"
+git tag
+git push origin --tags
+git log --oneline</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Use o padrão <code>vMAJOR.MINOR.PATCH</code> para versionar. Exemplo: <code>v1.0.0</code> para lançamento, <code>v1.0.1</code> para correção de bug, <code>v1.1.0</code> para nova funcionalidade.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git tag</footer>
+
+</body>
+</html>

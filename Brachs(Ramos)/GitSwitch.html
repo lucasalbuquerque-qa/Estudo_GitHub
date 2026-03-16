@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Switch</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🔀</span>
+    <h1>git switch <span class="tag">Branch (Ramos)</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git switch</strong> é a forma moderna de trocar de branch, introduzido no Git 2.23 como substituto mais claro do <code>git checkout</code>. Faz apenas uma coisa: mudar de branch.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git switch</strong> sempre que precisar mudar de branch. É mais simples e direto que o <code>git checkout</code>, que acumula várias funções diferentes.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Mudar para outra branch</h2>
+      <p>Troca para uma branch que já existe:</p>
+      <pre><code>git switch nome-da-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Criar e já entrar na branch</h2>
+      <p>Cria uma nova branch e muda para ela com o <strong>-c</strong>:</p>
+      <pre><code>git switch -c nova-branch</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Voltar para a branch anterior</h2>
+      <p>O traço <strong>-</strong> volta para a última branch que você estava:</p>
+      <pre><code>git switch -</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Voltar para a branch main</h2>
+      <p>Retorna para a branch principal do projeto:</p>
+      <pre><code>git switch main</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="06">Diferença com git checkout</h2>
+      <p>Enquanto o <code>git checkout</code> serve para branches <strong>e</strong> arquivos, o <code>git switch</code> é exclusivo para branches e o <code>git restore</code> para arquivos:</p>
+      <pre><code># Antigo (checkout faz tudo)
+git checkout minha-branch
+git checkout -b nova-branch
+
+# Moderno (cada comando tem um papel)
+git switch minha-branch
+git switch -c nova-branch</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code>git branch
+git switch -c minha-feature
+git branch
+git switch main
+git switch -</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> O <code>git switch</code> só está disponível no Git 2.23 ou superior. Rode <code>git --version</code> para verificar se seu Git já tem suporte.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git switch</footer>
+
+</body>
+</html>

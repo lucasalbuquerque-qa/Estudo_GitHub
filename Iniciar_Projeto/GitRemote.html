@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Remote</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🌐</span>
+    <h1>git remote <span class="tag">Iniciar Projeto</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git remote</strong> gerencia as conexões entre o seu repositório local e repositórios remotos no GitHub. Permite adicionar, remover, renomear e listar essas conexões.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git remote</strong> quando precisar conectar seu projeto local a um repositório no GitHub, trocar a URL de origem, ou gerenciar múltiplos remotos como no caso de forks.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Listar os remotos existentes</h2>
+      <p>Mostra todos os repositórios remotos conectados ao projeto:</p>
+      <pre><code>git remote -v</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Adicionar um remoto</h2>
+      <p>Conecta o projeto local a um repositório no GitHub:</p>
+      <pre><code>git remote add origin https://github.com/usuario/repositorio.git</code></pre>
+      <p><strong>origin</strong> é o nome padrão dado ao remoto principal, mas pode ser qualquer nome.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Trocar a URL de um remoto</h2>
+      <p>Atualiza o endereço de um remoto já existente:</p>
+      <pre><code>git remote set-url origin https://github.com/usuario/novo-repo.git</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Renomear um remoto</h2>
+      <p>Muda o nome de uma conexão remota:</p>
+      <pre><code>git remote rename origin producao</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="06">Remover um remoto</h2>
+      <p>Desconecta o projeto de um repositório remoto:</p>
+      <pre><code>git remote remove origin</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># Ver remotos atuais
+git remote -v
+
+# Adicionar remoto
+git remote add origin https://github.com/usuario/repo.git
+
+# Trocar URL (útil para corrigir conta errada)
+git remote set-url origin https://usuario@github.com/usuario/repo.git
+
+# Confirmar a troca
+git remote -v</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Em projetos com fork, é comum ter dois remotos: <code>origin</code> apontando para o seu fork e <code>upstream</code> apontando para o repositório original.
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git remote</footer>
+
+</body>
+</html>

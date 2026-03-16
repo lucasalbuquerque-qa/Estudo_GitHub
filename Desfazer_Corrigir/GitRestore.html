@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Restore</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="../index.html">← Voltar</a>
+    <span class="icon">🔙</span>
+    <h1>git restore <span class="tag">Desfazer / Corrigir</span></h1>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>O comando <strong>git restore</strong> restaura arquivos para um estado anterior sem mudar de branch. É o comando moderno para desfazer alterações em arquivos, substituindo o uso do <code>git checkout -- arquivo</code>.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="01">Quando usar</h2>
+      <p>Use <strong>git restore</strong> quando fizer alterações em um arquivo e quiser desfazê-las, voltando ao estado do último commit ou retirando arquivos do stage.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="02">Desfazer alterações em um arquivo</h2>
+      <p>Volta o arquivo ao estado do último commit, descartando as mudanças locais:</p>
+      <pre><code>git restore nome-do-arquivo.html</code></pre>
+      <p>⚠️ <strong>Atenção:</strong> essa ação é irreversível. As alterações não commitadas serão perdidas.</p>
+    </div>
+
+    <div class="step">
+      <h2 data-step="03">Desfazer alterações em todos os arquivos</h2>
+      <p>Descarta todas as mudanças não commitadas do projeto:</p>
+      <pre><code>git restore .</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="04">Tirar um arquivo do stage</h2>
+      <p>Remove um arquivo da área de stage sem perder as alterações (desfaz o git add):</p>
+      <pre><code>git restore --staged nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="05">Tirar todos os arquivos do stage</h2>
+      <p>Remove todos os arquivos que foram adicionados com git add:</p>
+      <pre><code>git restore --staged .</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="06">Restaurar a partir de um commit específico</h2>
+      <p>Traz a versão de um arquivo de um commit anterior:</p>
+      <pre><code>git restore --source abc1234 nome-do-arquivo.html</code></pre>
+    </div>
+
+    <div class="example">
+      <h2>Exemplo completo</h2>
+      <pre><code># Ver o que está modificado
+git status
+
+# Tirar arquivo do stage
+git restore --staged index.html
+
+# Desfazer alterações no arquivo
+git restore index.html
+
+# Confirmar que voltou ao normal
+git status</code></pre>
+    </div>
+
+    <div class="tip">
+      <strong>💡 Dica:</strong> Use <code>git restore --staged</code> para desfazer o <code>git add</code> e <code>git restore</code> para desfazer as edições no arquivo. São ações diferentes e independentes!
+    </div>
+
+  </main>
+
+  <footer>Estudo GitHub — git restore</footer>
+
+</body>
+</html>
