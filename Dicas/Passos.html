@@ -41,14 +41,16 @@
     </div>
 
     <div class="mini-steps">
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">01</span>
         <div class="mini-step-content">
           <p>Copie a URL do repositório no GitHub e clone:</p>
           <pre><code>git clone https://usuario@github.com/usuario/repo.git</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">02</span>
         <div class="mini-step-content">
           <p>Entre na pasta e verifique o estado:</p>
@@ -58,7 +60,8 @@ git branch
 git status</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">03</span>
         <div class="mini-step-content">
           <p>Configure o usuário se necessário (só para este projeto):</p>
@@ -77,8 +80,9 @@ git config user.email "seu@email.com"</code></pre>
       <span class="num">2</span> Enviar alterações — add, commit e push
     </div>
 
-    <div class="mini-steps">
-      <div class="mini-step">
+    <div class="step">
+      <div class="step"
+      >
         <span class="mini-step-num">01</span>
         <div class="mini-step-content">
           <p>Veja o que foi alterado e revise as mudanças:</p>
@@ -86,7 +90,7 @@ git config user.email "seu@email.com"</code></pre>
 git diff</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step">
         <span class="mini-step-num">02</span>
         <div class="mini-step-content">
           <p>Adicione os arquivos ao stage:</p>
@@ -97,21 +101,24 @@ git add .
 git add nome-do-arquivo.html</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">03</span>
         <div class="mini-step-content">
           <p>Crie o commit com uma mensagem clara:</p>
           <pre><code>git commit -m "feat: adiciona validação no formulário"</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">04</span>
         <div class="mini-step-content">
           <p>Envie para o GitHub:</p>
           <pre><code>git push</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">05</span>
         <div class="mini-step-content">
           <p>Confirme que foi enviado:</p>
@@ -131,28 +138,32 @@ git log --oneline -5</code></pre>
     </div>
 
     <div class="mini-steps">
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">01</span>
         <div class="mini-step-content">
           <p>Se tiver trabalho em andamento, guarde antes:</p>
           <pre><code>git stash save "trabalho em andamento"</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">02</span>
         <div class="mini-step-content">
           <p>Baixe e aplique as atualizações do GitHub:</p>
           <pre><code>git pull origin main</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">03</span>
         <div class="mini-step-content">
           <p>Restaure o trabalho que estava em andamento (se usou stash):</p>
           <pre><code>git stash pop</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">04</span>
         <div class="mini-step-content">
           <p>Se houver conflito, resolva os arquivos e finalize:</p>
@@ -172,7 +183,8 @@ git commit -m "Resolve conflito após pull"</code></pre>
     </div>
 
     <div class="mini-steps">
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">01</span>
         <div class="mini-step-content">
           <p>Parta sempre de uma main atualizada:</p>
@@ -180,14 +192,16 @@ git commit -m "Resolve conflito após pull"</code></pre>
 git pull origin main</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">02</span>
         <div class="mini-step-content">
           <p>Crie a branch e mude para ela:</p>
           <pre><code>git switch -c feature/nome-da-feature</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">03</span>
         <div class="mini-step-content">
           <p>Faça as alterações e commite:</p>
@@ -195,7 +209,8 @@ git pull origin main</code></pre>
 git commit -m "feat: descrição do que foi feito"</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">04</span>
         <div class="mini-step-content">
           <p>Envie a branch para o GitHub (primeiro push usa <strong>-u</strong>):</p>
@@ -214,7 +229,8 @@ git commit -m "feat: descrição do que foi feito"</code></pre>
     </div>
 
     <div class="mini-steps">
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">01</span>
         <div class="mini-step-content">
           <p>Volte para a main e atualize:</p>
@@ -222,14 +238,16 @@ git commit -m "feat: descrição do que foi feito"</code></pre>
 git pull origin main</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">02</span>
         <div class="mini-step-content">
           <p>Faça o merge da branch na main:</p>
           <pre><code>git merge feature/nome-da-feature</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">03</span>
         <div class="mini-step-content">
           <p>Se houver conflito, resolva e finalize:</p>
@@ -237,7 +255,8 @@ git pull origin main</code></pre>
 git commit -m "Merge da feature/nome com a main"</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">04</span>
         <div class="mini-step-content">
           <p>Envie a main atualizada e delete a branch:</p>
@@ -258,7 +277,8 @@ git push origin --delete feature/nome-da-feature</code></pre>
     </div>
 
     <div class="mini-steps">
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">01</span>
         <div class="mini-step-content">
           <p>Atualize a main local:</p>
@@ -266,7 +286,8 @@ git push origin --delete feature/nome-da-feature</code></pre>
 git pull origin main</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">02</span>
         <div class="mini-step-content">
           <p>Volte para a branch e execute o rebase:</p>
@@ -274,7 +295,8 @@ git pull origin main</code></pre>
 git rebase main</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">03</span>
         <div class="mini-step-content">
           <p>Se houver conflito, resolva e continue:</p>
@@ -285,7 +307,8 @@ git rebase --continue
 git rebase --abort</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">04</span>
         <div class="mini-step-content">
           <p>Envie com force-with-lease (necessário após rebase):</p>
@@ -304,28 +327,32 @@ git rebase --abort</code></pre>
     </div>
 
     <div class="mini-steps">
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">A</span>
         <div class="mini-step-content">
           <p><strong>Corrigir a mensagem</strong> do último commit (antes do push):</p>
           <pre><code>git commit --amend -m "Mensagem corrigida"</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">B</span>
         <div class="mini-step-content">
           <p><strong>Desfazer commit local</strong> mantendo as alterações:</p>
           <pre><code>git reset --soft HEAD~1</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">C</span>
         <div class="mini-step-content">
           <p><strong>Desfazer commit local</strong> descartando tudo (cuidado — irreversível):</p>
           <pre><code>git reset --hard HEAD~1</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">D</span>
         <div class="mini-step-content">
           <p><strong>Desfazer commit já enviado</strong> ao GitHub (seguro — cria novo commit):</p>
@@ -333,7 +360,8 @@ git rebase --abort</code></pre>
 git push</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">E</span>
         <div class="mini-step-content">
           <p><strong>Recuperar commit deletado</strong> por engano com reflog:</p>
@@ -356,8 +384,9 @@ git checkout -b recuperado abc1234</code></pre>
       <span class="num">8</span> Contribuir com Fork e Pull Request
     </div>
 
-    <div class="mini-steps">
-      <div class="mini-step">
+    <div class="step">
+      <div class="step"
+      >
         <span class="mini-step-num">01</span>
         <div class="mini-step-content">
           <p>Faça o fork no GitHub e clone o <strong>seu fork</strong>:</p>
@@ -365,14 +394,15 @@ git checkout -b recuperado abc1234</code></pre>
 cd repo</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step">
         <span class="mini-step-num">02</span>
-        <div class="mini-step-content">
+        <div >
           <p>Conecte ao repositório original:</p>
           <pre><code>git remote add upstream https://github.com/dono-original/repo.git</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">03</span>
         <div class="mini-step-content">
           <p>Crie uma branch, faça as alterações e commite:</p>
@@ -381,7 +411,8 @@ git add .
 git commit -m "fix: descreve a correção"</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">04</span>
         <div class="mini-step-content">
           <p>Atualize com o repositório original antes de enviar:</p>
@@ -389,7 +420,8 @@ git commit -m "fix: descreve a correção"</code></pre>
 git rebase upstream/main</code></pre>
         </div>
       </div>
-      <div class="mini-step">
+      <div class="step"
+      >
         <span class="mini-step-num">05</span>
         <div class="mini-step-content">
           <p>Envie para o seu fork e abra o Pull Request no GitHub:</p>
