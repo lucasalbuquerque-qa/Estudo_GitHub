@@ -354,7 +354,9 @@ pre {
   border-radius: 8px;
   padding: 18px 20px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   position: relative;
+  white-space: pre;
 }
 
 pre::before {
@@ -373,6 +375,14 @@ code {
   font-size: 0.88rem;
   color: var(--accent3);
   line-height: 1.8;
+  white-space: pre;
+}
+
+pre code {
+  white-space: pre;
+  word-wrap: normal;
+  display: block;
+  overflow-x: auto;
 }
 
 p code {
@@ -464,7 +474,19 @@ footer span {
 
   main { padding: 28px 16px; }
 
-  pre { padding: 16px 14px; }
+  pre { 
+    padding: 16px 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre;
+  }
+
+  pre code {
+    font-size: 0.8rem;
+    white-space: pre;
+  }
+
+  code { white-space: pre; }
 
   pre::before { display: none; }
 }
@@ -512,11 +534,225 @@ footer span {
 
   .step p { font-size: 0.86rem; }
 
-  code { font-size: 0.82rem; }
+  pre {
+    padding: 12px 12px;
+    font-size: 0.78rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre;
+  }
+
+  pre code {
+    font-size: 0.78rem;
+    white-space: pre;
+  }
+
+  code { 
+    font-size: 0.82rem;
+    white-space: pre;
+  }
 
   .example { padding: 18px 14px; }
 
   .tip { font-size: 0.82rem; padding: 10px 12px; }
 
   footer { padding: 20px 12px; font-size: 0.74rem; }
+}
+
+/* ════════════════════════════════
+   ESTILOS ESPECÍFICOS — PASSOS.HTML
+════════════════════════════════ */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent2);
+  margin: 48px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title span.num {
+  background: var(--accent2);
+  color: var(--bg);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Linha conectora entre seções */
+.connector {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+  color: var(--border);
+  font-size: 1.2rem;
+}
+
+/* Steps dentro de cada seção */
+.mini-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.mini-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  animation: fadeUp 0.4s ease both;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mini-step-num {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--accent4);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.mini-step-content {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mini-step-content p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+}
+
+.mini-step-content p strong {
+  color: var(--accent2);
+}
+
+.mini-step-content pre {
+  margin-bottom: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: pre;
+}
+
+.mini-step-content code {
+  white-space: pre;
+}
+
+/* Aviso/alerta */
+.alert {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.alert strong { color: var(--accent); }
+
+/* Navegação rápida */
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.nav-pills a {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-family: 'Fira Code', monospace;
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-pills a:hover {
+  color: var(--accent2);
+  border-color: var(--accent2);
+}
+
+/* Mobile responsivo para Passos */
+@media (max-width: 768px) {
+  .section-title {
+    margin: 32px 0 16px;
+    font-size: 0.95rem;
+  }
+
+  .mini-step-content pre {
+    padding: 12px 14px;
+    font-size: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mini-step-content code {
+    font-size: 0.75rem;
+    white-space: pre;
+  }
+
+  .mini-step {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mini-step-num {
+    align-self: flex-start;
+  }
+
+  .nav-pills {
+    gap: 6px;
+  }
+
+  .nav-pills a {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    margin: 24px 0 12px;
+    font-size: 0.9rem;
+  }
+
+  .mini-step-content pre {
+    padding: 10px 12px;
+    font-size: 0.72rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mini-step-content code {
+    font-size: 0.72rem;
+    white-space: pre;
+  }
+
+  .nav-pills {
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+
+  .nav-pills a {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+  }
 }
