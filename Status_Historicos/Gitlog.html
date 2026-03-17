@@ -49,6 +49,36 @@
       <pre><code>git log -5 --oneline</code></pre>
     </div>
 
+    <div class="step">
+      <h2 data-step="06">Filtrar por autor</h2>
+      <p>Mostra commits feitos por uma pessoa específica:</p>
+      <pre><code>git log --author="nome"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="07">Filtrar por período (data)</h2>
+      <p>Exibe commits dentro de um intervalo de datas:</p>
+      <pre><code>git log --since="2024-01-01" --until="2024-01-31"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="08">Buscar por palavra na mensagem</h2>
+      <p>Procura commits por termos como "bug", "fix" ou "hotfix":</p>
+      <pre><code>git log --grep="bug"</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="09">Histórico de um arquivo específico</h2>
+      <p>Mostra apenas commits que alteraram um arquivo:</p>
+      <pre><code>git log nome-do-arquivo.js</code></pre>
+    </div>
+
+    <div class="step">
+      <h2 data-step="10">Ver alterações detalhadas (diff)</h2>
+      <p>Exibe exatamente o que foi modificado em cada commit:</p>
+      <pre><code>git log -p</code></pre>
+    </div>
+
     <div class="example">
       <h2>Exemplo completo</h2>
       <pre><code>git log --oneline
